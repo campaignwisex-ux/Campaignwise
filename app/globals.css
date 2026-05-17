@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-page:    #EDECEA;
+  --bg-card:    #F7F6F2;
+  --bg-subtle:  #EFEDE8;
+  --bg-input:   #F0EEE9;
+  --border:     #E0DDD5;
+  --border-hover: rgba(37,99,235,0.35);
+  --accent:     #2563EB;
+  --text-1:     #1A1A18;
+  --text-2:     #63605B;
+  --text-3:     #9B9793;
+  --success:    #15803D;
+  --warning:    #B45309;
+  --danger:     #B91C1C;
+}
+
+* { box-sizing: border-box; }
+html { color-scheme: light; scroll-behavior: smooth; }
+
+/* ─── Scroll-reveal animation ──────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal:nth-child(1) { transition-delay: 0ms; }
+.reveal:nth-child(2) { transition-delay: 100ms; }
+.reveal:nth-child(3) { transition-delay: 200ms; }
+.reveal:nth-child(4) { transition-delay: 300ms; }
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-1);
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-mono {
+  font-family: var(--font-jetbrains-mono), monospace !important;
+}
+
+::-webkit-scrollbar        { width: 5px; height: 5px; }
+::-webkit-scrollbar-track  { background: var(--bg-subtle); }
+::-webkit-scrollbar-thumb  { background: var(--border); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #CCC8BE; }
+::selection { background: rgba(37,99,235,0.1); color: var(--text-1); }
+
+@layer utilities {
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+  .card-hover { transition: border-color 150ms ease; }
+  .card-hover:hover { border-color: rgba(37,99,235,0.35); }
+  .label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-3);
+  }
+
+  /* Grade badges — tinted to match warm background */
+  .badge-A { background: #ECFDF3; color: #15803D; border-color: #A7F3D0; }
+  .badge-B { background: #EFF6FF; color: #1D4ED8; border-color: #BFDBFE; }
+  .badge-C { background: #FEFCE8; color: #A16207; border-color: #FDE68A; }
+  .badge-D { background: #FFF7ED; color: #C2410C; border-color: #FED7AA; }
+  .badge-F { background: #FEF2F2; color: #B91C1C; border-color: #FECACA; }
+}
+
+/* Clerk overrides */
+.cl-card { background: var(--bg-card) !important; border: 1px solid var(--border) !important; border-radius: 12px !important; box-shadow: none !important; }
+.cl-headerTitle { color: var(--text-1) !important; font-weight: 600 !important; }
+.cl-headerSubtitle, .cl-dividerText, .cl-footerActionText { color: var(--text-2) !important; }
+.cl-formFieldLabel { color: var(--text-2) !important; font-size: 13px !important; }
+.cl-formFieldInput { background: var(--bg-input) !important; border: 1px solid var(--border) !important; color: var(--text-1) !important; border-radius: 8px !important; }
+.cl-formFieldInput:focus { border-color: #2563EB !important; box-shadow: 0 0 0 3px rgba(37,99,235,0.08) !important; }
+.cl-formButtonPrimary { background: #2563EB !important; border-radius: 8px !important; }
+.cl-socialButtonsBlockButton { background: var(--bg-input) !important; border: 1px solid var(--border) !important; color: var(--text-1) !important; border-radius: 8px !important; }
+.cl-dividerLine { background: var(--border) !important; }
+.cl-footerActionLink { color: #2563EB !important; }
+
+/* ─── Print styles ─────────────────────────────────────────────────────────── */
+@page { margin-bottom: 0; }
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    /* System fonts always render correctly in PDF — no custom font loading */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif !important;
+  }
+  .font-mono, [class*="font-mono"] {
+    font-family: 'Courier New', Courier, monospace !important;
+  }
+
+  /* Hide screen chrome */
+  .no-print      { display: none !important; }
+  aside, header  { display: none !important; }
+
+  /* Hide the screen-only sidebar insights */
+  .screen-insights { display: none !important; }
+
+  /* Show print-only sections */
+  .print-header           { display: block !important; }
+  .print-insights-section { display: block !important; }
+
+  /* Footer — static position, never overlaps content */
+  .print-footer {
+    display: flex !important;
+    position: static !important;
+    margin-top: 40px;
+    padding-top: 12px;
+    border-top: 0.5px solid #E8E6E0;
+    justify-content: space-between;
+    font-size: 10px;
+    color: #9B9B9B;
+  }
+
+  /* Base */
+  body { background: #ffffff !important; color: #1A1A18 !important; font-size: 11px; margin: 0; }
+  main { padding: 0 !important; max-width: 100% !important; }
+
+  /* Cards */
+  .card {
+    border: 1px solid #E8E6E0 !important;
+    background: #ffffff !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 10px;
+    overflow: visible !important;
+  }
+
+  /* Collapse 2-col grid to 1 col */
+  .xl\:grid-cols-3 { grid-template-columns: 1fr !important; }
+  .xl\:col-span-2  { grid-column: span 1 !important; }
+
+  /* Revenue Impact — no extra bottom gap */
+  .revenue-impact-section { margin-bottom: 0 !important; padding-bottom: 0 !important; }
+
+  /* Insights wrapper and ALL ancestors — remove every height/overflow constraint */
+  .print-insights-section,
+  .print-insights-section *,
+  main,
+  body {
+    overflow: visible !important;
+    max-height: none !important;
+    height: auto !important;
+  }
+
+  /* Print insight cards — stay together */
+  .print-insight-card,
+  .insight-card {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 12px;
+    overflow: visible !important;
+    max-height: none !important;
+    height: auto !important;
+  }
+
+  @page { margin: 14mm 12mm; }
+  .print-page-number::after { content: counter(page); }
+}
