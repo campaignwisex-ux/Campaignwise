@@ -206,7 +206,7 @@ function Mockup() {
                 <span style={{ fontSize: 9, fontWeight: 700, color: "#16A34A", background: "#F0FDF4", border: "1px solid #BBF7D0", padding: "1px 6px", borderRadius: 9999 }}>POSITIVE</span>
                 <span style={{ fontSize: 9, color: "#9B9B9B" }}>Layer 2 — Engagement</span>
               </div>
-              <div style={{ fontSize: 11, fontWeight: 600, color: "#1A1A18", marginBottom: 2 }}>Strong open rate of 38.67% — 84% above the industry benchmark</div>
+              <div style={{ fontSize: 11, fontWeight: 600, color: "#1A1A18", marginBottom: 2 }}>Open rate of 38.67%, exceeding the industry benchmark by 84%</div>
               <div style={{ fontSize: 10, color: "#6B6B6B" }}>Document the subject line formula and apply it as your control template for future sends.</div>
               <div style={{ fontSize: 9, color: "#9B9B9B", marginTop: 3, fontFamily: "monospace" }}>Actual: 38.67% · Benchmark: 21.00%</div>
             </div>
@@ -252,7 +252,7 @@ function Hero() {
         {/* Badge */}
         <div className="reveal" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#EFF6FF", border: "1px solid #BFDBFE", borderRadius: 6, padding: "6px 14px", marginBottom: 28 }}>
           <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#2563EB", display: "inline-block", flexShrink: 0 }} />
-          <span style={{ fontSize: 13, fontWeight: 500, color: "#2563EB" }}>Now in early access — SFMC & Braze</span>
+          <span style={{ fontSize: 13, fontWeight: 500, color: "#2563EB" }}>Now in early access · SFMC and Braze</span>
         </div>
 
         {/* Headline */}
@@ -263,9 +263,9 @@ function Hero() {
 
         {/* Sub */}
         <p className="reveal" style={{ fontSize: 18, color: "#6B7280", maxWidth: 580, margin: "0 auto 36px", lineHeight: 1.65 }}>
-          The campaign intelligence layer for marketing ops teams running SFMC, Braze, HubSpot, and Klaviyo.
-          Connect your CRM and data warehouse for full revenue attribution. Know why every campaign
-          performed the way it did — and exactly what to fix next.
+          The campaign intelligence platform for marketing operations teams running SFMC, Braze, HubSpot, and Klaviyo.
+          Connect your CRM and data warehouse for complete revenue attribution. Surface the root cause of every
+          campaign result and the precise actions to take next.
         </p>
 
         {/* CTAs */}
@@ -345,9 +345,9 @@ function PlatformStrip() {
 // ─── PROBLEM ──────────────────────────────────────────────────────────────────
 
 const PROBLEMS = [
-  { Icon: ImageOff, title: "Analytics is just a screenshot", body: "Most teams export a dashboard, paste it into a slide, and call it analysis. No trends. No root cause. No action plan. Just a PNG that's irrelevant by Monday morning." },
-  { Icon: Clock,    title: "2–6 hours per campaign review", body: "Post-send analysis is manual, repetitive, and inconsistent. By the time insights are ready, the next campaign is already out the door." },
-  { Icon: AlertCircle, title: "Platforms show numbers, not answers", body: "SFMC and Braze tell you what happened. Nobody tells you why your open rate dropped 38% or what your hard bounce rate means for sender reputation next week." },
+  { Icon: ImageOff, title: "Analytics is just a screenshot", body: "Most teams export a dashboard, paste it into a slide, and call it analysis. No trend data. No root cause. No action plan. A static export that is obsolete before the next campaign launches." },
+  { Icon: Clock,    title: "2 to 6 hours per campaign review", body: "Post-send analysis is manual, repetitive, and inconsistent across teams. By the time the review is complete, the next campaign has already launched without the benefit of those findings." },
+  { Icon: AlertCircle, title: "Platforms surface numbers, not answers", body: "Your marketing platform tells you what happened. It does not explain why your open rate declined 38 percent, or what your hard bounce rate means for inbox placement next quarter." },
 ];
 
 function Problem() {
@@ -381,9 +381,9 @@ function Problem() {
 // ─── SOLUTION ─────────────────────────────────────────────────────────────────
 
 const SOLUTIONS = [
-  { Icon: Layers,    title: "Three diagnostic layers", body: "Delivery health, engagement quality, and execution logic — analyzed automatically for every campaign send." },
-  { Icon: BarChart2, title: "Dual benchmarking",        body: "Every metric compared against your own account history AND industry averages side by side. Context that changes every decision." },
-  { Icon: Zap,       title: "Specific, actionable insights", body: "Not 'your open rate is low.' Instead: your open rate dropped 38%, this segment received 4 sends in 14 days, and your spam complaint rate crossed the Gmail threshold. Here is what to do." },
+  { Icon: Layers,    title: "Three diagnostic layers", body: "Delivery health, engagement quality, and execution logic are analyzed automatically across every campaign send. No configuration required." },
+  { Icon: BarChart2, title: "Dual benchmarking",        body: "Every metric is benchmarked against your account history and industry averages in parallel. The context that makes every operational decision defensible." },
+  { Icon: Zap,       title: "Specific, actionable findings", body: "Not a generic alert that open rate is low. A precise diagnosis: open rate declined 38 percent, this segment received four sends in 14 days, and the spam complaint rate has crossed the Gmail threshold. With the recommended corrective action." },
 ];
 
 function Solution() {
@@ -393,7 +393,7 @@ function Solution() {
         <div style={{ textAlign: "center", marginBottom: 52 }}>
           <p className="reveal" style={{ fontSize: 11, fontWeight: 500, color: "#2563EB", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 12 }}>The Solution</p>
           <h2 className="reveal" style={{ fontSize: "clamp(24px,4vw,32px)", fontWeight: 600, color: "#1A1A18", maxWidth: 640, margin: "0 auto", lineHeight: 1.3 }}>
-            CampaignWise acts like a senior campaign analyst — available instantly, after every send.
+            CampaignWise delivers senior analyst-quality diagnostics on every campaign, automatically.
           </h2>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 16, maxWidth: 700, margin: "0 auto" }}>
@@ -419,16 +419,16 @@ function Solution() {
 // ─── FEATURES ─────────────────────────────────────────────────────────────────
 
 const FEATURES = [
-  { Icon: FileText, title: "Campaign Health Score",      body: "A single 0–100 score per campaign, weighted across delivery, engagement, and execution quality. Trend it over time. See what is getting better and what is getting worse." },
-  { Icon: Shield,   title: "Deliverability Intelligence", body: "SPF, DKIM, DMARC, sender score, and blocklist status checked automatically after every sync. Know if your domain reputation is at risk before it costs you inbox placement." },
-  { Icon: TrendingUp, title: "Revenue Impact",           body: "Connect Salesforce CRM to see which campaigns influenced pipeline, created opportunities, and attributed to closed revenue. Marketing finally speaks the language of sales.", soon: true },
-  { Icon: Cpu,      title: "Intelligent Agents",          body: "Automated agents that suppress over-messaged segments, alert sales when marketing contacts active deals, and flag deliverability risks before the next send fires.", soon: true },
+  { Icon: FileText, title: "Campaign Health Score",      body: "A composite 0 to 100 score per campaign, weighted across delivery, engagement, and execution quality. Track performance trends over time and identify what is improving and what requires immediate attention." },
+  { Icon: Shield,   title: "Deliverability Intelligence", body: "SPF, DKIM, DMARC, sender score, and blocklist status are verified automatically after every sync. Identify domain reputation risks before they affect inbox placement and pipeline." },
+  { Icon: TrendingUp, title: "Revenue Impact",           body: "Connect Salesforce CRM to measure which campaigns influenced pipeline creation, generated opportunities, and contributed to closed revenue. Give marketing a seat at the revenue table.", soon: true },
+  { Icon: Cpu,      title: "Intelligent Agents",          body: "Automated agents that suppress over-messaged segments, alert sales representatives when marketing is contacting accounts in active deals, and flag deliverability risks before the next send executes.", soon: true },
 ];
 
 const CONNECTIONS = [
-  { from: "SFMC", to: "Salesforce CRM", benefit: "See which campaigns influenced deals" },
-  { from: "Braze", to: "Snowflake", benefit: "Query your data warehouse directly" },
-  { from: "HubSpot", to: "BigQuery", benefit: "Unified reporting across your stack" },
+  { from: "SFMC", to: "Salesforce CRM", benefit: "Measure campaign influence on pipeline and closed revenue" },
+  { from: "Braze", to: "Snowflake", benefit: "Run diagnostics directly against your data warehouse" },
+  { from: "HubSpot", to: "BigQuery", benefit: "Unified attribution reporting across your full stack" },
 ];
 
 function Features() {
@@ -438,7 +438,7 @@ function Features() {
         <div style={{ textAlign: "center", marginBottom: 52 }}>
           <p className="reveal" style={{ fontSize: 11, fontWeight: 500, color: "#2563EB", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 12 }}>What It Does</p>
           <h2 className="reveal" style={{ fontSize: "clamp(24px,4vw,32px)", fontWeight: 600, color: "#1A1A18", maxWidth: 560, margin: "0 auto", lineHeight: 1.3 }}>
-            From raw metrics to analyst-quality insight — in seconds.
+            From raw send data to analyst-quality insight, in seconds.
           </h2>
         </div>
 
@@ -474,8 +474,8 @@ function Features() {
               </div>
               <p style={{ fontSize: 14, color: "#6B7280", lineHeight: 1.7, marginBottom: 16 }}>
                 CampaignWise is platform-agnostic by design. Connect your marketing automation platform,
-                your CRM, and your data warehouse and get a unified intelligence layer across all of them.
-                No ripping and replacing. No new platform to learn. Just intelligence on top of what you already have.
+                CRM, and data warehouse to create a unified intelligence layer across your entire stack.
+                No migration. No new platforms to learn. Intelligence applied directly to your existing infrastructure.
               </p>
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                 {["Marketing Automation","CRM and Sales","Data Warehouse","Analytics"].map(p => (
@@ -508,10 +508,10 @@ function Features() {
 // ─── VISION / ABOUT ───────────────────────────────────────────────────────────
 
 const PHASES = [
-  { phase: "Phase 1", title: "Campaign Intelligence",      body: "Connect SFMC or Braze. Get instant diagnostic intelligence on every send.",                                                  status: "Live now",  statusBg: "#DCFCE7", statusColor: "#16A34A", statusBorder: "#A7F3D0" },
-  { phase: "Phase 2", title: "Revenue Attribution",        body: "Connect your CRM. See campaign influence on pipeline and closed revenue.",                                                     status: "2026",      statusBg: "#FFFBEB", statusColor: "#D97706", statusBorder: "#FDE68A" },
+  { phase: "Phase 1", title: "Campaign Intelligence",      body: "Connect SFMC or Braze. Receive automated diagnostic intelligence on every campaign send, from day one.",                       status: "Live now",  statusBg: "#DCFCE7", statusColor: "#16A34A", statusBorder: "#A7F3D0" },
+  { phase: "Phase 2", title: "Revenue Attribution",        body: "Connect Salesforce or HubSpot CRM. Measure campaign influence on pipeline creation and contribution to closed revenue.",        status: "2026",      statusBg: "#FFFBEB", statusColor: "#D97706", statusBorder: "#FDE68A" },
   { phase: "Phase 3", title: "Data Warehouse Intelligence", body: "Connect Snowflake, BigQuery, or Databricks. Zero-copy architecture. Your data never leaves your infrastructure.",              status: "Roadmap",   statusBg: "#EFF6FF", statusColor: "#2563EB", statusBorder: "#BFDBFE" },
-  { phase: "Phase 4", title: "Agentic Orchestration",      body: "AI agents that act on insights automatically. Suppression, alerts, and coordination across marketing and sales.",              status: "Future",    statusBg: "rgba(255,255,255,0.08)", statusColor: "#94A3B8", statusBorder: "rgba(255,255,255,0.15)" },
+  { phase: "Phase 4", title: "Agentic Orchestration",      body: "Automated agents that execute on insights. Suppression workflows, real-time alerting, and coordinated action across marketing and sales.", status: "Future", statusBg: "rgba(255,255,255,0.08)", statusColor: "#94A3B8", statusBorder: "rgba(255,255,255,0.15)" },
 ];
 
 function Vision() {
@@ -529,9 +529,9 @@ function Vision() {
             We are building the revenue intelligence layer for marketing.
           </h2>
           {[
-            "CampaignWise started as a simple question. Why do marketing teams at companies using six-figure platforms still analyze campaigns by taking screenshots?",
-            "The answer is that platforms are built to send campaigns — not to understand them. CampaignWise is the intelligence layer that sits on top of your existing stack and tells you what is actually happening, why it happened, and what to do next.",
-            "Built by a Salesforce Marketing Cloud architect with hands-on experience across enterprise retail, automotive, and technology. CampaignWise encodes the knowledge of a senior campaign analyst into a product any marketing ops team can use from day one.",
+            "CampaignWise started with a single observation. Marketing teams at enterprise organizations spending six figures on automation platforms were still analyzing campaigns by exporting screenshots into PowerPoint.",
+            "The root cause is structural. Platforms are built to execute campaigns, not to analyze them. CampaignWise is the intelligence layer that sits on top of your existing stack and surfaces what happened, why it happened, and the specific actions to take next.",
+            "Built by a Salesforce Marketing Cloud architect with hands-on delivery experience across enterprise retail, automotive, and technology. CampaignWise encodes the diagnostic knowledge of a senior campaign analyst into a product that any marketing operations team can deploy and use on day one.",
           ].map((p, i) => (
             <p key={i} className="reveal" style={{ fontSize: 17, color: "#94A3B8", lineHeight: 1.75, marginBottom: 18 }}>{p}</p>
           ))}
@@ -603,7 +603,7 @@ function EarlyAccess() {
               <p style={{ fontSize: 11, fontWeight: 500, color: "#2563EB", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>Early Access</p>
               <h2 style={{ fontSize: 28, fontWeight: 600, color: "#1A1A18", marginBottom: 10, lineHeight: 1.25 }}>Be first. Shape the product.</h2>
               <p style={{ fontSize: 15, color: "#6B7280", marginBottom: 28, lineHeight: 1.65 }}>
-                We are personally onboarding our first 20 customers. Every account gets a free setup call and campaign audit with the founder.
+                We are personally onboarding the first 20 accounts. Every customer receives a dedicated setup call and a complimentary campaign audit with the founder.
               </p>
               <form onSubmit={onSubmit} style={{ display: "flex", flexDirection: "column", gap: 12 }}>
                 <input placeholder="Full name" value={form.name} onChange={e => setForm(f => ({...f,name:e.target.value}))} required style={iStyle} onFocus={onFocus} onBlur={onBlur} />
@@ -617,7 +617,7 @@ function EarlyAccess() {
                     <option key={p} value={p}>{p}</option>
                   ))}
                 </select>
-                <textarea placeholder="Biggest campaign challenge (optional) — e.g. We cannot figure out why our re-engagement campaigns keep underperforming..."
+                <textarea placeholder="Your biggest campaign challenge (optional). For example: our re-engagement campaigns consistently underperform but we cannot identify the root cause."
                   value={form.challenge} onChange={e => setForm(f => ({...f,challenge:e.target.value}))} rows={3}
                   style={{ ...iStyle, height: "auto", padding: "10px 14px", resize: "vertical", lineHeight: 1.5 } as React.CSSProperties}
                   onFocus={onFocus} onBlur={onBlur} />
@@ -633,7 +633,7 @@ function EarlyAccess() {
                   {status === "loading" ? (<><Loader2 size={16} className="animate-spin" /> Submitting…</>) : "Request early access →"}
                 </button>
                 <p style={{ fontSize: 11, color: "#9B9B9B", textAlign: "center", margin: 0 }}>
-                  No spam. No sales calls. Just a personal conversation about your campaigns.
+                  No outbound sequences. No sales pressure. A direct conversation about your campaigns.
                 </p>
               </form>
             </>
