@@ -209,7 +209,7 @@ const PrintReport = React.forwardRef<HTMLDivElement, PrintReportProps>(
         <div style={S.sectionTitle}>Campaign Details</div>
         <div style={{ ...S.card, marginBottom: "12px" }}>
           <div style={{ fontSize: "16px", fontWeight: 700, color: "#1A1A18", marginBottom: "4px" }}>{campaign.name}</div>
-          {campaign.subject && <div style={{ fontSize: "12px", color: "#6B6B6B", marginBottom: "6px" }}>"{campaign.subject}"</div>}
+          {campaign.subject && <div style={{ fontSize: "12px", color: "#6B6B6B", marginBottom: "6px" }}>&ldquo;{campaign.subject}&rdquo;</div>}
           <div style={{ fontSize: "10px", color: "#9B9B9B", marginBottom: "12px" }}>
             {campaign.status.toUpperCase()}{campaign.external_id ? ` · Job #${campaign.external_id}` : ""} · {sentDateStr}
           </div>

@@ -240,7 +240,7 @@ export default function CampaignAnalysisPage() {
                   {campaign.external_id && <span className="text-[11px] font-mono" style={{ color: "#9B9793" }}>Job #{campaign.external_id}</span>}
                 </div>
                 <h1 className="text-[20px] font-semibold leading-tight mb-1" style={{ color: "#1A1A18" }}>{campaign.name}</h1>
-                {campaign.subject && <p className="text-[13px]" style={{ color: "#63605B" }}>"{campaign.subject}"</p>}
+                {campaign.subject && <p className="text-[13px]" style={{ color: "#63605B" }}>&ldquo;{campaign.subject}&rdquo;</p>}
                 {campaign.sent_at && (
                   <p className="text-[12px] mt-2 flex items-center gap-1.5" style={{ color: "#9B9793" }}>
                     <Clock size={11} />
